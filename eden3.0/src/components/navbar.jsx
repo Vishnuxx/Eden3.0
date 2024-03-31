@@ -27,15 +27,15 @@ function NavBar() {
 			{isOpen && (
 				<div className="md:hidden flex flex-col items-center justify-center ">
 					<div onClick={openDrawer} className="w-full h-screen top-0 left-0 md:hidden bg-black absolute bg-opacity-[0.8] backdrop:blur-lg"></div>
-					<div className="flex flex-col border border-[#FF9F2F] rounded-xl  w-full shadow-lg h-fit min-h-[50%] fixed top-0 left-0 gap-0 py-10 justify-center items-center">
+					<div className="flex flex-col border border-[#FF9F2F]  rounded-b-xl  w-full  h-fit min-h-[50%] fixed top-0 right-0 gap-0 py-10 justify-center items-center">
 						<div className="flex md:hidden flex-row w-fit items-center">
 							<img src={logo} className="w-[200px] h-[70px] object-cover" alt="logo" />
 							{/* <h4 className="font-bold text-3xl">Matrix</h4> */}
 						</div>
 						{menuItems.map((value, index) => (
-							<Link to={value.url} onClickCapture={openDrawer} className="text-md text-center hover:text-orange-300 md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index} onClick={() => navigate(value.url)}>
+							<a href={value.url} onClickCapture={openDrawer} className="text-md text-center hover:text-orange-300 md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index} onClick={() => navigate(value.url)}>
 								{value.text}
-							</Link>
+							</a>
 						))}
 					</div>
 				</div>
