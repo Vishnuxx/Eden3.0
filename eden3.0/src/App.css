@@ -1,0 +1,16 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-family: JetBrains Mono;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./assets/JetBrainsMono-Bold.woff2') format('woff2'),
+       url('./assets/JetBrainsMono-Regular.woff2') format('woff');
+       /* url('../fonts/font.ttf') format('truetype'); */
+  /* Add additional font formats if necessary */
+  /* Specify the correct path to the font files */
+}
