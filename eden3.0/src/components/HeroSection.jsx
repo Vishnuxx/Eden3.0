@@ -3,7 +3,7 @@ import eden_l2 from "../assets/eden_l2.svg";
 import eden_white from "../assets/eden_white.svg";
 import design1_r from "../assets/design1_r.svg";
 import design1_l from "../assets/design1_l.svg";
-import AnimatedButton from "./AnimatedButton";
+import RegisterButton from "./RegisterButton";
 
 const HeroSection = () => (
 	<div id="home" className="w-full h-full flex flex-col justify-center items-center relative">
@@ -15,7 +15,7 @@ const HeroSection = () => (
 			<p className="text-white text-xs md:text-lg">Innovate Collaborate Transform</p>
 			<div className="flex w-full justify-center items-center">
 				<img src={design1_l} alt="eden" className="w-fit h-fit object-fill z-[1]" />
-				<AnimatedButton />
+				<RegisterButton />
 				<img src={design1_r} alt="eden" className="w-fit h-fit object-fill z-[1]" />
 			</div>
 		</div>

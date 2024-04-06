@@ -68,12 +68,12 @@ function AboutPage() {
 
 function AccordionItem({ title, content, isOpen, toggleAccordion }) {
 	return (
-		<div className="border border-[#ff9e30] rounded mb-2 w-full p-4">
+		<div className="border border-[#ff9e30] rounded mb-2 w-full p-4 transition-all duration-500">
 			<div className="p-2 cursor-pointer flex justify-between items-center text-gray" onClick={toggleAccordion}>
 				<h2 className="font-bold text-lg text-start">{title}</h2>
 				{isOpen ? <span>▲</span> : <span>▼</span>}
 			</div>
-			{isOpen && <div className="p-2 w-full text-start">{content}</div>}
+			<div className={`p-2 w-full text-start transition-all ${isOpen ? "visible h-fit" : "hidden h-0"}`}>{content}</div>
 		</div>
 	);
 }
@@ -92,7 +92,22 @@ function Accordion() {
 		},
 		{
 			title: "Can we build Hardware products?",
-			content: "Eden3.0 is 24hr long software hackathon.",
+			content: "Eden3.0 primarily focuses on building software solutions.",
+			isOpen: false,
+		},
+		{
+			title: "Is it an offline hackathon",
+			content: "Yes, Eden 3.0 is an offline hackathon which will be conducted at Marian engineering college.",
+			isOpen: false,
+		},
+		{
+			title: "Is it free to register",
+			content: "No, Eden3.0 is a paid event.",
+			isOpen: false,
+		},
+		{
+			title: "Is food included in the registration fees?",
+			content: "Yes, participants can opt for the option with food..",
 			isOpen: false,
 		},
 	]);
