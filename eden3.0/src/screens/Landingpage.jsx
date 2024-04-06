@@ -69,8 +69,8 @@ const AnimatedButton = () => {
 	};
 
 	return (
-		<button  onPointerEnter={onPointerEnter} onPointerLeave={onPointerExit} onPointerDown={handleClick} onPointerUp={onPointerUp} className=" relative z-[2] outline-none flex items-center box-border">
-			<img ref={buttonRef}  src={normalButton} alt="Button" className="" />
-		</button>
+		<a href="" onPointerEnter={onPointerEnter} onPointerLeave={onPointerExit} onPointerDown={handleClick} onPointerUp={onPointerUp} className=" relative z-[2] outline-none flex items-center box-border">
+			<img ref={buttonRef}  src={normalButton} alt="Button" className="touch-none pointer-events-none" />
+		</a>
 	);
 };
