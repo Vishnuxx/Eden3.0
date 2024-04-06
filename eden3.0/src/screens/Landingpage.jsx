@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 
+
 function LandingPage() {
     return (
         <div className="w-full h-full overflow-y-scroll scroll-smooth">
