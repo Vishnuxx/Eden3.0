@@ -11,11 +11,12 @@ function NavBar() {
 	};
 
 	const menuItems = [
-		{ text: "Home", url: "#" },
+		{ text: "Home", url: "#home" },
 		{ text: "About Us", url: "#about" },
 		{ text: "prize", url: "#prize" },
 		{ text: "Contact Us", url: "#contact" },
 		{ text: "Agenda", url: "#agenda" },
+		{ text: "FAQ", url: "#faq" },
 	];
 	return (
 		<nav className="flex flex-row justify-between h-[90px] w-full z-50 text-white shadow-sm fixed top-0 left-0 md:px-20 bg-gradient-to-b from-[#000000] to-transparant transition-all duration-300">
@@ -33,7 +34,7 @@ function NavBar() {
 							{/* <h4 className="font-bold text-3xl">Matrix</h4> */}
 						</div>
 						{menuItems.map((value, index) => (
-							<a href={value.url} onClickCapture={openDrawer} className="text-md text-center hover:text-orange-300 md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index} onClick={() => navigate(value.url)}>
+							<a href={value.url} onClickCapture={openDrawer} className="text-md text-center hover:text-orange-300 md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index}>
 								{value.text}
 							</a>
 						))}
@@ -43,9 +44,9 @@ function NavBar() {
 
 			<div className=" flex-row hidden md:flex w-full max-w-[600px] justify-around items-center">
 				{menuItems.map((value, index) => (
-					<Link to={value.url} onClickCapture={openDrawer} className="text-md hover:text-orange-300 text-center  border-b border-gray md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index} onClick={() => navigate(value.url)}>
+					<a href={value.url} onClickCapture={openDrawer} className="text-md text-center hover:text-orange-300 md:border-0 p-4 py-6 md:p-0  flex items-center justify-center h-full cursor-pointer w-full hover:bg-gray md:hover:bg-[#ffffff00] md:hover:text-primary" key={index}>
 						{value.text}
-					</Link>
+					</a>
 				))}
 			</div>
 

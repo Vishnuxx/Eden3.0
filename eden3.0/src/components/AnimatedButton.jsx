@@ -1,22 +1,7 @@
-import NavBar from "../components/NavBar";
-import AboutPage from "./About.Page";
-import HeroSection from "../components/HeroSection";
-import Footer from "../components/Footer";
-
-function LandingPage() {
-    return (
-        <div className="w-full h-full overflow-y-scroll scroll-smooth">
-            <NavBar></NavBar>
-            <HeroSection />
-            <AboutPage></AboutPage>
-            <Footer />
-        </div>
-    );
-}
-
-export default LandingPage;
-		
-
+import { useState } from "react";
+import normalButton from '../assets/button_normal.svg';
+import hoveredButton from '../assets/button_hover.svg';
+import pressedButton from '../assets/button_pressed.svg';
 
 const AnimatedButton = () => {
     const [buttonState, setButtonState] = useState(0);
@@ -37,8 +22,8 @@ const AnimatedButton = () => {
     };
 
     const onPointerUp = () => {
-        setButtonState(0)
-        
+        setButtonState(0);
+
         // console.log("up");
     };
 
@@ -50,3 +35,5 @@ const AnimatedButton = () => {
         </a>
     );
 };
+
+export default AnimatedButton;
