@@ -6,7 +6,7 @@ function NavBar() {
 
 	const openDrawer = () => {
 		setIsOpen(!isOpen);
-	};
+	}
 
 	const menuItems = [
 		// { text: "Home", url: "#home" },
