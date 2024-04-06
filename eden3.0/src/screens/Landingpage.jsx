@@ -8,12 +8,10 @@ import pressedButton from "../assets/button_pressed.svg";
 import hoveredButton from "../assets/button_hover.svg";
 import design1_r from "../assets/design1_r.svg";
 import design1_l from "../assets/design1_l.svg";
-import gsap from "gsap";
-import {  useRef } from "react";
+import { useRef, useState } from "react";
 import AboutPage from "./About.Page";
 
 function LandingPage() {
-	
 	return (
 		<div className="w-full h-full scroll-smooth">
 			<NavBar></NavBar>
@@ -47,39 +45,33 @@ function LandingPage() {
 export default LandingPage;
 
 const AnimatedButton = () => {
-	const buttonRef = useRef();
+	const [buttonState, setButtonState] = useState(0);
 
 	const handleClick = () => {
-		gsap.to(buttonRef.current, {
-			attr: { src: pressedButton },
-		});
+		setButtonState(2);
 		console.log("click");
 	};
 
 	const onPointerEnter = () => {
-		gsap.to(buttonRef.current, {
-			attr: { src: hoveredButton },
-		});
+		setButtonState(2);
 		console.log("enter");
-	}
+	};
 
 	const onPointerExit = () => {
-		gsap.to(buttonRef.current, {
-			attr: { src: normalButton },
-		});
+		setButtonState(0);
 		console.log("exit");
 	};
 
 	const onPointerUp = () => {
-		gsap.to(buttonRef.current, {
-			attr: { src: normalButton },
-		});
+		setButtonState(0)
 		console.log("up");
 	};
 
 	return (
 		<a href="" onPointerEnter={onPointerEnter} onPointerLeave={onPointerExit} onPointerDown={handleClick} onPointerUp={onPointerUp} className=" relative z-[2] outline-none flex items-center box-border">
-			<img ref={buttonRef}  src={normalButton} alt="Button" className="touch-none pointer-events-none" />
+			{buttonState == 0 && <img src={normalButton} alt="Button" className="touch-none pointer-events-none" />}
+			{buttonState == 1 && <img src={hoveredButton} alt="Button" className="touch-none pointer-events-none" />}
+			{buttonState == 2 && <img src={pressedButton} alt="Button" className="touch-none pointer-events-none" />}
 		</a>
 	);
 };
