@@ -1,7 +1,7 @@
 import AboutPage from "./About.Page";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
-import NavBar from "../components/navbar";
+import NavBar from "../components/NavBar";
 
 
 function LandingPage() {
