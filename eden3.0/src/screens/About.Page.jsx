@@ -11,9 +11,16 @@ function AboutPage() {
 			<h3 id="#sponsors" className="text-3xl font-bold py-20">
 				Our Sponsors
 			</h3>
-			<div className="w-full flex flex-row justify-center items-center h-[150px] bg-gradient-to-r py-10 from-[#000000] via-[#4b3d2c]  to-black ">
-				<marquee direction="">lkjdlfkf</marquee>
+
+			<div className="w-full flex flex-row justify-center font-sans font-bold text-3xl gap-20 text-white items-center h-[150px]  py-10 bg-gradient-to-r from-[#000000] via-[#262626]  to-black ">
+				<marquee direction="">
+					<div className="flex gap-20">
+						<p className="w-fit">Inspira Marian</p>
+						<p className="w-fit">MuLearn</p>
+					</div>
+				</marquee>
 			</div>
+
 			<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-7 pt-20 ">Dive into innovation at EDEN 3.0! Join us for a thrilling software hackathon, hosted by Marian Engineering College in collaboration with IEDC and μLearn. In a rapidly evolving industry landscape, working hand-in-hand with industry leaders is key. EDEN 3.0 is your chance to tackle real-world industry challenges, connect with mentors, and showcase your skills to recruiters. Don't miss this opportunity to shape the future—join us at EDEN 3.0!</p>
 			<h3 id="prize" className="text-3xl font-bold py-20">
 				Prizes
@@ -75,17 +82,17 @@ function Accordion() {
 	const [accordionItems, setAccordionItems] = useState([
 		{
 			title: "What is a Eden3.0?",
-			content: "Central Processing Unit",
+			content: "Eden3.0 is a hackathon conducted by Marian IEDC Inspira",
 			isOpen: false,
 		},
 		{
 			title: "What's the duration of Eden3.0?",
-			content: "Cascading Style Sheet",
+			content: "Eden3.0 is 24hr long software hackathon.",
 			isOpen: false,
 		},
 		{
-			title: 'Find the value of "X" here.',
-			content: '"X" is definitely something.',
+			title: "Can we build Hardware products?",
+			content: "Eden3.0 is 24hr long software hackathon.",
 			isOpen: false,
 		},
 	]);
