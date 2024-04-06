@@ -10,15 +10,16 @@ import design1_r from "../assets/design1_r.svg";
 import design1_l from "../assets/design1_l.svg";
 import gsap from "gsap";
 import {  useRef } from "react";
+import AboutPage from "./About.Page";
 
 function LandingPage() {
 	
 	return (
-		<>
+		<div className="w-full h-full scroll-smooth">
 			<NavBar></NavBar>
 			<div id="#" className="w-full h-full flex flex-col justify-center items-center relative">
-				<a  href="/" />
-				<img  src={cyber_punk} alt="cyberpunk" className="w-full absolute h-full  object-cover" />
+				<a href="/" />
+				<img src={cyber_punk} alt="cyberpunk" className="w-full absolute h-full  object-cover" />
 				<div className="w-full h-full absolute bg-black opacity-90"></div>
 				<img src={eden_l2} alt="eden" className="w-full absolute" />
 				<div className="relative w-full flex flex-col items-center top-[50px] z-[1]">
@@ -35,37 +36,45 @@ function LandingPage() {
 				</div>
 				<img src={eden_outlined} alt="eden" className="w-[300px] h-fit object-fill absolute bottom-0" />
 			</div>
-		</>
+			<AboutPage></AboutPage>
+			<footer className="w-full min-h-[400px] bg-[#181818] flex flex-col items-center justify-center">
+				<img src={eden_white} alt="" className="w-[300px] h-fit object-fill" />
+			</footer>
+		</div>
 	);
 }
 
 export default LandingPage;
 
 const AnimatedButton = () => {
-	const buttonRef = useRef(null);
+	const buttonRef = useRef();
 
 	const handleClick = () => {
 		gsap.to(buttonRef.current, {
 			attr: { src: pressedButton },
 		});
+		console.log("click");
 	};
 
 	const onPointerEnter = () => {
 		gsap.to(buttonRef.current, {
 			attr: { src: hoveredButton },
 		});
+		console.log("enter");
 	}
 
 	const onPointerExit = () => {
 		gsap.to(buttonRef.current, {
 			attr: { src: normalButton },
 		});
+		console.log("exit");
 	};
 
 	const onPointerUp = () => {
 		gsap.to(buttonRef.current, {
 			attr: { src: normalButton },
 		});
+		console.log("up");
 	};
 
 	return (
