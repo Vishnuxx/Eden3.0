@@ -15,13 +15,12 @@ function AboutPage() {
 			</h3>
 
 			<div className="w-full flex flex-row justify-center font-sans font-bold text-3xl gap-20 text-white items-center h-[150px]  py-10 bg-gradient-to-r from-[#000000] via-[#262626]  to-black ">
-				{/* <marquee direction=""> */}
+				<marquee direction="">
 				<div className="flex gap-20 items-center overflow-x-scroll ">
-					<p className="w-fit h-fit">Inspira Marian</p>
 					<img src={mulearnlogo} alt="mulearn" className="h-[150px]" />
 					<img src={inspiralogo} alt="mulearn" className="h-[80px] object-contain" />
 				</div>
-				{/* </marquee> */}
+				</marquee>
 			</div>
 
 			<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-[2rem] pt-20 text-[#FF9F2F] md:text-xl">Dive into innovation at EDEN 3.0! Join us for a thrilling software hackathon, hosted by Marian Engineering College in collaboration with IEDC and μLearn. In a rapidly evolving industry landscape, working hand-in-hand with industry leaders is key. EDEN 3.0 is your chance to tackle real-world industry challenges, connect with mentors, and showcase your skills to recruiters. Don't miss this opportunity to shape the future—join us at EDEN 3.0!</p>
