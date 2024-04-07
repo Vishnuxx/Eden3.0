@@ -11,9 +11,8 @@ function NavBar() {
 	const menuItems = [
 		// { text: "Home", url: "#home" },
 		{ text: "About Us", url: "#about" },
-		{ text: "prize", url: "#prize" },
+		{ text: "Prizes", url: "#prize" },
 		{ text: "Contact Us", url: "#contact" },
-		{ text: "Agenda", url: "#agenda" },
 		{ text: "FAQ", url: "#faq" },
 	];
 	return (
