@@ -16,10 +16,10 @@ function AboutPage() {
 
 			<div className="w-full flex flex-row justify-center font-sans font-bold text-3xl gap-20 text-white items-center h-[150px]  py-10 bg-gradient-to-r from-[#000000] via-[#262626]  to-black ">
 				<marquee direction="">
-				<div className="flex gap-20 items-center overflow-x-scroll ">
-					<img src={mulearnlogo} alt="mulearn" className="h-[150px]" />
-					<img src={inspiralogo} alt="mulearn" className="h-[80px] object-contain" />
-				</div>
+					<div className="flex gap-20 items-center overflow-x-scroll ">
+						<img src={mulearnlogo} alt="mulearn" className="h-[150px]" />
+						<img src={inspiralogo} alt="mulearn" className="h-[80px] object-contain" />
+					</div>
 				</marquee>
 			</div>
 
@@ -40,9 +40,18 @@ function AboutPage() {
 					<h3 id="contact" className="text-3xl font-bold py-10">
 						Contact Us
 					</h3>
-					<div className="w-full max-w-[1000px] flex flex-col justify-center">
+					<div className="w-full max-w-[1000px] flex flex-col justify-center gap-4">
 						<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-[2rem]  text-[#FF9F2F] md:text-xl">
-							Contact details
+							<a href="phoneto:+917736635812" className="border border-white border-3 p-2 rounded-md w-[230px] flex flex-row justify-around font-black hover:bg-[#3b2e21] ">
+								<img width="30" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/phone--v1.png" alt="phone--v1" />
+								{"Ashwin Murali"}
+							</a>
+						</p>
+						<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-[2rem]  text-[#FF9F2F] md:text-xl">
+							<a href="phoneto:+918281345823" className="border border-white border-3 p-2 rounded-md w-[230px] flex flex-row justify-around font-black hover:bg-[#3b2e21] ">
+								<img width="30" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/phone--v1.png" alt="phone--v1" />
+								Joan Liz Geogy
+							</a>
 						</p>
 					</div>
 				</div>
@@ -52,9 +61,7 @@ function AboutPage() {
 						Venue
 					</h3>
 					<div className="w-full max-w-[1000px] flex flex-col items-center justify-center py-10">
-						<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-[2rem]  text-[#FF9F2F] md:text-xl">
-							Marian IEDC Hall , Mechanical Department
-						</p>
+						<p className="w-full flex flex-col justify-center items-center max-w-[1000px] word-nowrap text-wrap align-middle leading-[2rem]  text-[#FF9F2F] md:text-xl">Marian IEDC Hall , Mechanical Department</p>
 					</div>
 				</div>
 			</div>
