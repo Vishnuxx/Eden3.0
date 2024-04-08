@@ -35,7 +35,7 @@ function AboutPage() {
 				</div>
 			</div>
 
-			<div className="border border-[#FF9F2F] max-w-[1000px] h-fit min-h-[300px] w-full rounded-md flex flex-col  justify-around ">
+			<div className="border border-[#FF9F2F] max-w-[1000px] h-fit min-h-[300px] w-full rounded-md flex flex-col  justify-around gap-10 ">
 				<div className="w-full h-full flex flex-col">
 					<h3 id="contact" className="text-3xl font-bold py-10">
 						Contact Us
@@ -57,7 +57,7 @@ function AboutPage() {
 				</div>
 
 				<div className="w-full h-full flex flex-col">
-					<h3 id="venue" className="text-3xl font-bold py-10">
+					<h3 id="venue" className="text-3xl font-bold ">
 						Venue
 					</h3>
 					<div className="w-full max-w-[1000px] flex flex-col items-center justify-center py-10">
